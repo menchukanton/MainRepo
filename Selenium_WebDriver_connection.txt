@@ -1,0 +1,21 @@
+	
+	System.setProperty("webdriver.chrome.driver", "path_to_webdriver(chrome,firefox,IE...)");
+       
+	WebDriver driver = new ChromeDriver(); // connect the class ChromeDriver to webdriver interface
+       
+	driver.get("hsite_URL"); //go to a site
+
+	Thread.sleep(2000); //use to wait 
+
+ 
+        WebElement minInput = driver.findElement(By.name("min")); //get an element for future work with it 
+        
+        minInput.clear(); //clear the field
+ 
+        minInput.sendKeys("50"); //input data to the field
+
+        buttonGen.click(); //click on a button method
+
+        driver.quit(); //close driver method
+
+
