@@ -1,4 +1,7 @@
--Java
--Regular Expression (RegEx2)
--TestNG
--Selenium WebDriver
+Training included:
+- Java Core
+- Selenium WebDriver
+- TestNG
+- Regular Expression (RE2)
+- GIT
+- Linux
