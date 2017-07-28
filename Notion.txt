@@ -1,6 +1,6 @@
 Training included:
 - Java Core
-- Selenium WebDriver (PageObject & PageFacory)
+- Selenium WebDriver (General using, Page object, Page facory)
 - TestNG
 - Regular Expression (RE2)
 - GIT
