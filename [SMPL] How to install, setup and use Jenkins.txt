@@ -1,0 +1,29 @@
+*** How to install, setup and use Jenkins ***
+
+Setup:
+1. Jenkins site https://jenkins.io/
+2. Choose OS version https://jenkins.io/download/
+and follow to instruction 
+
+Settings:
+1. Install plug-in "Maven Integration Plugin"
+2. Install plug-in "TestNG Result"
+3. Install plug-in "Jenkins Email"
+
+How to use:
+1. Create new item: New Maven Project
+2. Source code -> Git
+3. Input the URL of your Git repository: "... .git"
+4. Create credential: password/login of your repository
+5. Choose the branch
+6. "Build" -> "Tools and Option" -> input "mvn clean test -DtestNG.file=scr/test/resources/main"
+mvn don't write
+
+Some tips:
+- "Build Setting" -> "Post-build Actions" -> "Build Other Project" - input name of next to build project. Build and run automaticaly
+
+- Plug-in "Jenkins Email" - plug-in for more comfortable and usefull reports. Email can be setup at Jenkins setings. More info at "Jenkins Email" we bsite.
+
+
+
+

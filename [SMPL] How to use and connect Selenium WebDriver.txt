@@ -1,0 +1,47 @@
+*** Selenium WebDriver connection ***
+
+//Download driver (chrome, mozila, etc.)	
+//Connect chromedriver to your project.
+	System.setProperty("webdriver.chrome.driver", "path_to_webdriver(chrome,firefox,IE...)");
+
+//Create new example of class ChromeDriver. It's will connect ChromeDriver class to webdriver interface.   
+	WebDriver driver = new ChromeDriver(); // connect the class ChromeDriver to webdriver interface
+
+//The setting for waiting of visiliable an element. 
+//1st parameter - time range;	2nd parameter - times of checking       
+	driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+
+//Maximize window
+	driver.manage().window().maximize();
+
+//Close window and quit driver
+	driver.quit();
+
+//Constructor for Page Object style. All classes must be an objects
+	public LoginPage(WebDriver driver){
+   	     this.driver = driver;
+  	      PageFactory.initElements(driver,this); //for initialization Web Elements
+  	  }
+
+//Field declaration and use it
+    //Without PageFactory
+	private By email_field = By.cssSelector("div>input[name='login_email']");
+	driver.findElement(email_field).sendKeys("testusermail2017@gmail.com");
+    //With PageFactory
+	PageFactory.initElements(driver,this); //MUST BE DECLARED IN THE CLASS CONSTRUCTOR
+	@FindBy(css = "div>input[name='login_email']") private WebElement email_field;
+	email_field.sendKeys("testmail@gmail.com");
+
+//Simple wait(sleep)
+protected void sleep(int timeout) {
+        try {
+            Thread.sleep(timeout * 1000);
+        } catch (InterruptedException e) {
+        }
+
+Tips:
+	All class must be an objects. 
+	Create constructor for asable use class as object.
+	Create separate classes for different pages.
+	Create separate class for test methods.
+
