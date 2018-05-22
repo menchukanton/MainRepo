@@ -1,0 +1,21 @@
+----------------------------------------------------
+|		Checklist for testing the search field: 	|
+----------------------------------------------------
+| 				What?					| Result	|
+----------------------------------------------------				
+|								word	|	YES		|
+|						the second word	|	YES 	|
+|							two words	|	YES 	|
+|part of the word (partial coincidence)	|	YES 	|
+|					digit (1 character)	|	YES 	|
+|					digit (2 digits)	|	YES 	|
+|							characters	|	YES 	|
+|					keyboard operation	|	YES 	|
+|		the ability to insert a mouse	|	YES 	|
+|		the ability to insert hotkeys	|	YES 	|
+|	word (absent in the general list)	|	NO      |
+|	number (absent in the general list)	|	NO      |
+|characters (not in the general list)	|	NO      |
+|					case sensitivity	|	NO      |
+|								gaps	|	NO      |
+----------------------------------------------------
